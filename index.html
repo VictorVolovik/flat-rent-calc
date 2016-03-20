@@ -41,60 +41,83 @@
                 <form class="form" action="" method="post">
 
                     <div class="form-group">
-                        <label for="">Электричество</label>
+                        <label for="electricity-spent">Электричество</label>
                         <div class="row">
-                            <div class="col-xs-6">
-                                <input type="text" class="form-control" name="name" value="3.52">
+                            <div class="col-xs-5">
+                                <input type="text" class="form-control" id="electricity-price" name="electricity-price">
                             </div>
-                            <div class="col-xs-6">
-                                <input type="text" class="form-control" name="name" value="">
+                            <div class="col-xs-2 times-block">
+                                <span class="times">&times;</span>
                             </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="">Холодная вода</label>
-                        <div class="row">
-                            <div class="col-xs-6">
-                                <input type="text" class="form-control" name="name" value="30.87">
-                            </div>
-                            <div class="col-xs-6">
-                                <input type="text" class="form-control" name="name" value="">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="">Горячая вода</label>
-                        <div class="row">
-                            <div class="col-xs-6">
-                                <input type="text" class="form-control" name="name" value="151.36">
-                            </div>
-                            <div class="col-xs-6">
-                                <input type="text" class="form-control" name="name" value="">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="">Трубопровод</label>
-                        <div class="row">
-                            <div class="col-xs-6">
-                                <input type="text" class="form-control" name="name" value="21.90">
-                            </div>
-                            <div class="col-xs-6">
-                                <input type="text" class="form-control" name="name" value="">
+                            <div class="col-xs-5">
+                                <input type="text" class="form-control"
+                                id="electricity-spent" name="electricity-spent" >
                             </div>
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <label for="">Аренда</label>
-                        <input type="text" class="form-control" name="name" value="35000">
+                        <label for="cold-water-spent">Холодная вода</label>
+                        <div class="row">
+                            <div class="col-xs-5">
+                                <input type="text" class="form-control"
+                                id="cold-water-price" name="cold-water-price" >
+                            </div>
+                            <div class="col-xs-2 times-block">
+                                <span class="times">&times;</span>
+                            </div>
+                            <div class="col-xs-5">
+                                <input type="text" class="form-control"
+                                id="cold-water-spent" name="cold-water-spent" >
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="hot-water-spent">Горячая вода</label>
+                        <div class="row">
+                            <div class="col-xs-5">
+                                <input type="text" class="form-control"
+                                id="hot-water-price"
+                                name="hot-water-price">
+                            </div>
+                            <div class="col-xs-2 times-block">
+                                <span class="times">&times;</span>
+                            </div>
+                            <div class="col-xs-5">
+                                <input type="text" class="form-control"
+                                id="hot-water-spent" name="hot-water-spent">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="tube-spent">Трубопровод</label>
+                        <div class="row">
+                            <div class="col-xs-5">
+                                <input type="text" class="form-control"
+                                id="tube-price" name="tube-price">
+                            </div>
+                            <div class="col-xs-2 times-block">
+                                <span class="times">&times;</span>
+                            </div>
+                            <div class="col-xs-5">
+                                <input type="text" class="form-control"
+                                id="tube-spent" name="tube-spent">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="rent-price">Аренда</label>
+                        <input type="text" class="form-control" id="rent-price" name="rent-price">
                     </div>
                     <div class="form-group">
-                        <label for="">Интернет</label>
-                        <input type="text" class="form-control" name="name" value="500">
+                        <label for="internet-price">Интернет</label>
+                        <input type="text" class="form-control" id="internet-price" name="internet-price">
                     </div>
                     <div class="form-group">
-                        <button type="submit" class="btn btn-success pull-right">Посчитать!</button>
+                        <button type="submit" class="btn btn-success pull-right">Посчитать</button>
                     </div>
 
                 </form>

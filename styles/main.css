@@ -5,3 +5,20 @@ h1 {
 h2 {
   text-align: left;
 }
+
+.form-group {
+
+}
+
+.times-block {
+  text-align: center;
+  vertical-align: baseline;
+}
+
+.times {
+  display: inline-block;
+  font-size: 24px;
+  line-height: 1.2;
+  width: 24px;
+  height: 24px;
+}
