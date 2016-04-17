@@ -1,3 +1,13 @@
+/**
+ * Price constructor
+ * @param {number} electricity Electricity price
+ * @param {number} coldWater Cold water price
+ * @param {number} hotWater Hot water price
+ * @param {number} tube Tube price
+ * @param {number} rent Overall rent price
+ * @param {number} internet Internet price
+ * @returns {object} Price object
+ */
 var Prices = function (electricity, coldWater, hotWater, tube, rent, internet) {
   this.electricityPrice = electricity;
   this.coldWaterPrice = coldWater;
@@ -5,12 +15,22 @@ var Prices = function (electricity, coldWater, hotWater, tube, rent, internet) {
   this.tubePrice = tube;
   this.rentPrice = rent;
   this.internetPrice = internet;
-  this.calculateCost = function (electricitySpent, coldWaterSpent, hotWaterSpent, tubeSpent) {
+
+
+  /**
+   * Calculates expnseses for spent resources with prices
+   * @param {number} electricitySpent Electricity spent this month
+   * @param {number} coldWaterSpent Cold water spent this month
+   * @param {number} hotWaterSpent Hot water spent this month
+   * @param {number} tubeSpent Tube usage spent (Hot water + Cold water)
+   * @returns {number} Overall expnseses
+   */
+  this.calculateExpenses = function (electricitySpent, coldWaterSpent, hotWaterSpent, tubeSpent) {
     return this.electricityPrice * electricitySpent +
-          this.coldWaterPrice * coldWaterSpent +
-          this.hotWaterPrice * hotWaterSpent +
-          this.tubePrice * tubeSpent +
-          this.rentPrice + this.internetPrice;
+      this.coldWaterPrice * coldWaterSpent +
+      this.hotWaterPrice * hotWaterSpent +
+      this.tubePrice * tubeSpent +
+      this.rentPrice + this.internetPrice;
   };
 };
 
@@ -30,6 +50,6 @@ $(document).ready(function () {
     var coldWaterSpent = $('#cold-water-spent').val();
     var hotWaterSpent = $('#hot-water-spent').val();
     var tubeSpent = $('#tube-spent').val();
-    console.log(currentPrices.calculateCost(electricitySpent, coldWaterSpent, hotWaterSpent, tubeSpent));
+    console.log(currentPrices.calculateExpenses(electricitySpent, coldWaterSpent, hotWaterSpent, tubeSpent));
   });
 });
