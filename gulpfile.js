@@ -39,7 +39,7 @@ gulp.task('css', function () {
 
 // ready js
 gulp.task('js', function () {
-  gulp.src(['./node_modules/jquery/dist/jquery.min.js', './scripts/**/*.js'])
+  gulp.src(['./node_modules/jquery/dist/jquery.min.js', './node_modules/bootstrap/dist/js/bootstrap.min.js', './scripts/**/*.js'])
     .pipe(uglify())
     .pipe(concat('main.js'))
     .pipe(gulp.dest('./build/scripts'));
