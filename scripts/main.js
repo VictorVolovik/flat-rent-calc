@@ -44,12 +44,15 @@ $(document).ready(function () {
   $('#rent-price').val(currentPrices.rentPrice);
   $('#internet-price').val(currentPrices.internetPrice);
 
+  var resultBlock = $('.result-block');
+
   $('form').on('submit', function (e) {
     e.preventDefault();
     var electricitySpent = $('#electricity-spent').val();
     var coldWaterSpent = $('#cold-water-spent').val();
     var hotWaterSpent = $('#hot-water-spent').val();
     var tubeSpent = $('#tube-spent').val();
-    console.log(currentPrices.calculateExpenses(electricitySpent, coldWaterSpent, hotWaterSpent, tubeSpent));
+    var result = currentPrices.calculateExpenses(electricitySpent, coldWaterSpent, hotWaterSpent, tubeSpent);
+    resultBlock.text(result);
   });
 });
